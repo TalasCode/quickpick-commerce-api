@@ -1,63 +1,161 @@
-# 🛒 CommerceCore API
+# QuickPick Commerce API
 
-A modern, scalable, and production-ready eCommerce backend built with **ASP.NET Core** and **Clean Architecture** principles.
+A scalable ASP.NET Core Web API backend for an e-commerce platform featuring authentication, role-based authorization, product management, shopping workflows, and administrative controls.
 
-This project provides a complete foundation for building powerful eCommerce platforms, including authentication, product management, order processing, shopping carts, and advanced administrative management through role-based permissions.
-
----
-
-# ✨ Features
-
-- 🔐 JWT Authentication & Authorization
-- 👨‍💼 Multi-Role Administrative System
-- 🛡️ Permission-Based Access Control
-- 📦 Product & Category Management
-- 🛒 Shopping Cart System
-- 📑 Order Processing
-- 💳 Payment Integration Ready
-- ❤️ Wishlist Support
-- 🔎 Filtering, Pagination & Search
-- 📁 Clean Architecture Structure
-- 🧩 Repository & Service Pattern
-- 📡 RESTful API Design
-- 🧪 Swagger/OpenAPI Documentation
-- 🗄️ Entity Framework Core Integration
-- ⚡ Scalable & Maintainable Architecture
-- 🐳 Docker Ready
-- ☁️ Cloud Deployment Friendly
+Built with a layered architecture using .NET 8, Entity Framework Core, and SQL Server.
 
 ---
 
-# 👨‍💼 Administrative Roles
+## Features
 
-The platform supports multiple administrator roles with customizable permissions.
+### Authentication & Security
 
-Examples include:
+* JWT authentication
+* Role-based access control
+* Custom route permission middleware
+* User and role management
 
-- Super Admin
-- Product Manager
-- Order Manager
-- Content Manager
-- Support Administrator
+### Product Management
 
-Each role can have specific access privileges to different modules and operations inside the system.
+* Categories
+* Brands
+* Items
+* Offers
+* Coupons
+
+### Commerce Features
+
+* Shopping cart
+* Wishlist
+* Orders
+* Order items
+* Product reviews
+
+### API Features
+
+* RESTful API architecture
+* Swagger documentation
+* Layered service structure
+* Entity Framework Core integration
 
 ---
 
-# 🏗️ Architecture
+## Architecture
 
-The project follows **Clean Architecture** principles to ensure:
+```text
+Client Applications
+        ↓
+ASP.NET Core Controllers
+        ↓
+Service Layer
+        ↓
+Repositories + Unit of Work
+        ↓
+Entity Framework Core
+        ↓
+SQL Server
+```
 
-- Scalability
-- Maintainability
-- Separation of Concerns
-- Testability
+---
 
-### Project Structure
+## Tech Stack
+
+* ASP.NET Core Web API (.NET 8)
+* C#
+* Entity Framework Core
+* SQL Server
+* JWT Authentication
+* AutoMapper
+* Swagger / OpenAPI
+
+---
+
+## Project Structure
+
+```text
+QuickPick-Commerce-API/
+
+├── eCommerceAPI
+│   ├── Controllers
+│   ├── Request Models
+│   ├── AutoMapper
+│
+├── eCommerceAPI.Core
+│   ├── Models
+│   ├── DbContext
+│   ├── Repositories
+│   ├── DTOs
+│
+├── eCommerce.Service
+│   ├── Business Logic
+│   ├── Authentication
+│   ├── Permission Middleware
+```
+
+---
+
+## Main API Modules
+
+* Authentication
+* Users
+* Roles
+* Permissions
+* Categories
+* Brands
+* Products
+* Coupons
+* Cart
+* Wishlist
+* Orders
+* Reviews
+
+---
+
+## Getting Started
+
+Clone the repository:
 
 ```bash
-src/
-├── Core/            # Domain entities & business rules
-├── Application/     # Business logic & use cases
-├── Infrastructure/  # Database & external services
-├── API/             # REST API endpoints
+git clone <repo-url>
+```
+
+Restore dependencies:
+
+```bash
+dotnet restore
+```
+
+Build:
+
+```bash
+dotnet build
+```
+
+Run:
+
+```bash
+dotnet run
+```
+
+Open Swagger:
+
+```text
+https://localhost:7274/swagger
+```
+
+---
+
+## Future Improvements
+
+* Password hashing implementation
+* Automated testing
+* Docker support
+* Payment integration
+* Database migrations
+* Standardized API responses
+
+---
+
+## Why I built this
+
+This project was built to strengthen backend engineering skills around authentication, API design, layered architecture, and building real-world commerce workflows.
