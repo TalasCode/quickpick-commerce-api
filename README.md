@@ -1,8 +1,8 @@
 # QuickPick Commerce API
 
-A scalable ASP.NET Core Web API backend for an e-commerce platform featuring authentication, role-based authorization, product management, shopping workflows, and administrative controls.
+A scalable ASP.NET Core Web API backend powering an e-commerce platform with authentication, role-based authorization, product management, and commerce workflows.
 
-Built with a layered architecture using .NET 8, Entity Framework Core, and SQL Server.
+Built using a layered architecture with .NET 8, Entity Framework Core, SQL Server, and JWT authentication.
 
 ---
 
@@ -11,31 +11,31 @@ Built with a layered architecture using .NET 8, Entity Framework Core, and SQL S
 ### Authentication & Security
 
 * JWT authentication
-* Role-based access control
-* Custom route permission middleware
+* Role-based access control (RBAC)
+* Custom permission middleware
 * User and role management
 
 ### Product Management
 
 * Categories
 * Brands
-* Items
+* Products
 * Offers
 * Coupons
 
-### Commerce Features
+### Commerce Workflows
 
 * Shopping cart
 * Wishlist
-* Orders
-* Order items
+* Orders and order items
 * Product reviews
 
-### API Features
+### Backend Architecture
 
-* RESTful API architecture
-* Swagger documentation
-* Layered service structure
+* RESTful API design
+* Swagger/OpenAPI documentation
+* Layered architecture
+* Repository + Unit of Work pattern
 * Entity Framework Core integration
 
 ---
@@ -45,11 +45,11 @@ Built with a layered architecture using .NET 8, Entity Framework Core, and SQL S
 ```text
 Client Applications
         ↓
-ASP.NET Core Controllers
+ASP.NET Controllers
         ↓
 Service Layer
         ↓
-Repositories + Unit of Work
+Repositories + Unit Of Work
         ↓
 Entity Framework Core
         ↓
@@ -79,13 +79,13 @@ QuickPick-Commerce-API/
 │   ├── Controllers
 │   ├── Request Models
 │   ├── AutoMapper
-│
+
 ├── eCommerceAPI.Core
 │   ├── Models
 │   ├── DbContext
 │   ├── Repositories
 │   ├── DTOs
-│
+
 ├── eCommerce.Service
 │   ├── Business Logic
 │   ├── Authentication
@@ -94,15 +94,15 @@ QuickPick-Commerce-API/
 
 ---
 
-## Main API Modules
+## Core Modules
 
 * Authentication
 * Users
 * Roles
 * Permissions
+* Products
 * Categories
 * Brands
-* Products
 * Coupons
 * Cart
 * Wishlist
@@ -113,13 +113,13 @@ QuickPick-Commerce-API/
 
 ## Getting Started
 
-Clone the repository:
+Clone repository:
 
 ```bash
 git clone <repo-url>
 ```
 
-Restore dependencies:
+Install dependencies:
 
 ```bash
 dotnet restore
@@ -137,7 +137,7 @@ Run:
 dotnet run
 ```
 
-Open Swagger:
+Swagger:
 
 ```text
 https://localhost:7274/swagger
@@ -147,9 +147,9 @@ https://localhost:7274/swagger
 
 ## Future Improvements
 
-* Password hashing implementation
-* Automated testing
+* Password hashing
 * Docker support
+* Automated testing
 * Payment integration
 * Database migrations
 * Standardized API responses
@@ -158,4 +158,4 @@ https://localhost:7274/swagger
 
 ## Why I built this
 
-This project was built to strengthen backend engineering skills around authentication, API design, layered architecture, and building real-world commerce workflows.
+This project was built to strengthen backend engineering skills around API design, authentication, layered architectures, and real-world commerce workflows.
